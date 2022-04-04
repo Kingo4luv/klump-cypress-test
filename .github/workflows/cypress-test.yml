@@ -1,5 +1,6 @@
 name: GitHub Actions Demo
 on: [pull_request]
+
 env:
     VUE_APP_NODE_ENV: ${{ secrets.VUE_APP_NODE_ENV }}
     VUE_APP_API_URL:  ${{ secrets.VUE_APP_API_URL }}
@@ -7,6 +8,7 @@ env:
     VUE_APP_CLIENT_KEY: ${{ secrets.VUE_APP_CLIENT_KEY }}
     VUE_APP_CLIENT_SECRET: ${{ secrets.VUE_APP_CLIENT_SECRET }}
     VUE_APP_BUGSNAG_KEY: ${{ secrets.VUE_APP_BUGSNAG_KEY }}
+    
 jobs:
  cypress-run:
     runs-on: ubuntu-latest
