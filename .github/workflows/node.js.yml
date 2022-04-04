@@ -1,0 +1,29 @@
+name: Chrome headless
+
+on: push
+
+env:
+    VUE_APP_NODE_ENV: ${{ secrets.VUE_APP_NODE_ENV }}
+    VUE_APP_API_URL:  ${{ secrets.VUE_APP_API_URL }}
+    VUE_APP_CLIENT_ID: ${{ secrets.VUE_APP_CLIENT_ID }}
+    VUE_APP_CLIENT_KEY: ${{ secrets.VUE_APP_CLIENT_KEY }}
+    VUE_APP_CLIENT_SECRET: ${{ secrets.VUE_APP_CLIENT_SECRET }}
+    VUE_APP_BUGSNAG_KEY: ${{ secrets.VUE_APP_BUGSNAG_KEY }}
+
+jobs:
+  chrome-headless:
+    runs-on: ubuntu-18.04
+    container: cypress/included:3.8.3
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Setup npm package
+        run: npm init -y && npm install
+      - name: Headless Chrome
+        uses: cypress-io/github-action@v2
+        timeout-minutes: 10
+        with:
+          build: npm run build
+          start: npm run serve
+          browser: chrome
+          headless: true
