@@ -2,10 +2,12 @@ name: Lint Files and Run Test
 "on": 
     push:
         branches:
-          - main
+          - master
+          - release/develop
     pull_request:
         branches:
-          - main
+          - master
+          - release/develop
 
 env:
     VUE_APP_NODE_ENV: ${{ secrets.CYPRESS_RECORD_KEY }}
