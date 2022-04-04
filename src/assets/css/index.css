@@ -1,0 +1,192 @@
+@font-face {
+	font-family: 'Avenir';
+	font-style: normal !important;
+	font-size: 16px !important;
+	color: #141414 !important;
+	line-height: 21.86px !important;
+	src: url('../fonts/AvenirLTStd-Book.otf');
+}
+
+@font-face {
+	font-family: 'Avenir-Bold';
+	src: url('../fonts/AvenirLTStd-Black.otf');
+}
+
+body {
+	font-family: 'Avenir';
+	margin: 0;
+	background-color: #f7fafc;
+}
+.border-container {
+	border: 1.15732px solid #eeeeee;
+}
+.container-box-shadow {
+	box-shadow: 0px 5.78659px 11.5732px rgba(176, 176, 176, 0.06);
+}
+.text-light-blue {
+	color: #1a90e5;
+}
+.label-text {
+	font-weight: 500;
+	line-height: 22px;
+}
+.label-text-list {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 19.12px;
+	color: #5c5c5c;
+}
+.tab-settings {
+	background-color: #f7fafc;
+	font-weight: 800;
+	font-size: 14px;
+	line-height: 19px;
+	color: #4062d1;
+}
+.tab-settings-inactive {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 19px;
+	color: #919191;
+}
+.tab-selected {
+	background-color: rgba(64, 98, 209, 0.1);
+	color: #4062d1;
+	font-weight: 800;
+}
+.table-items {
+	font-weight: 500;
+	line-height: 12px;
+}
+.tab-not-selected {
+	color: #919191;
+}
+.button-primary {
+	background-color: #4062d1;
+	border-radius: 4px !important;
+	padding: 8px 16px;
+	border: none;
+}
+.button-success {
+	background-color: #3fb761;
+	border-radius: 4px !important;
+	padding: 8px 16px;
+	border: none;
+}
+.button-white {
+	background-color: #ffff;
+	padding: 8px 16px;
+	border: none;
+}
+.button-danger {
+	background-color: #de5a5b;
+	border-radius: 4px !important;
+	padding: 8px 16px;
+	border: none;
+}
+.button-secondary {
+	background-color: #f8f8f8;
+	border-radius: 4px !important;
+	padding: 8px 16px;
+	border: 1px solid #e8e8e8;
+}
+.table-items {
+	font-size: 13px;
+	line-height: 18px;
+	color: #242f41;
+}
+.items {
+	color: #171717;
+	font-weight: 800;
+	line-height: 16.39px;
+	font-size: 12px;
+}
+.items-child {
+	color: #555555;
+	font-weight: 800;
+	font-size: 10px;
+	line-height: 13.66px;
+}
+input[type='checkbox'] {
+	height: 20px;
+	width: 20px;
+}
+::placeholder {
+	color: #353535 !important;
+	opacity: 0.5 !important;
+}
+
+:-ms-input-placeholder {
+	/* Internet Explorer 10-11 */
+	color: #353535 !important;
+	opacity: 0.5 !important;
+}
+
+::-ms-input-placeholder {
+	/* Microsoft Edge */
+	color: #353535 !important;
+	opacity: 0.5 !important;
+}
+.radio-container {
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.radio-container input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+}
+.checkmark {
+	position: absolute;
+	height: 16px;
+	width: 16px;
+	padding: 2px;
+	top: 3px;
+	background-color: white;
+	border: 1px solid #b1b1b1;
+	border-radius: 50%;
+}
+.radio-container input:checked ~ .checkmark {
+	background-color: white;
+}
+.radio-container .checkmark:after {
+	top: 2px;
+	left: 2px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: #5278c4;
+}
+/* Show the indicator (dot/circle) when checked */
+.radio-container input:checked ~ .checkmark:after {
+	display: block;
+}
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+	content: '';
+	position: absolute;
+	display: none;
+}
+.text-title{
+	color: #171717;
+	line-height: 16px;
+	font-size: 0.75;
+}
+.img-size{
+   width:60px; 
+   height:60px;
+}
+.fs-15 {
+	font-size: 0.938rem;
+	color: #4062D1;
+}
+.fs-12{
+	font-size: 0.75rem;
+	color: #7E7E7E;
+}
+.leading-17{
+  line-height: 1.063rem;
+}

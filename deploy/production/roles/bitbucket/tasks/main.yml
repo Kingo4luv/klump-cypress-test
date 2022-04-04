@@ -1,0 +1,33 @@
+---
+- name: Create The SSH Public Key File
+  copy: 
+    src: ~/.ssh/id_rsa.pub
+    dest: /root/.ssh/id_rsa.pub
+    mode: 0644
+
+- name: Create The SSH Private Key File
+  copy:
+    src: ~/.ssh/id_rsa
+    dest: /root/.ssh/id_rsa
+    mode: 0600
+
+- name: Is there any pending commit?
+  command: git status
+  args:
+    chdir: /var/www/{{ domain }}/
+  register: git_status
+
+- name: Commit any outstanding files
+  command: git commit -am "Predeployment unmerged task"
+  args:
+    chdir: /var/www/{{ domain }}/
+  when: "'modified:' in git_status.stdout"
+
+- name: Clone The git Repository
+  git:
+    repo: git@github.com:Klump-Inc/merchant-dashboard.git
+    dest: /var/www/{{ domain }}
+    version: master
+    accept_hostkey: yes
+    clone: yes
+    update: yes

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<title>Klump &mdash; Merchant Dashboard</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+			crossorigin="anonymous"
+		/>
+		
+		<link href="https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.css" rel="stylesheet"/>
+
+		<link rel="icon" href="./favicon.ico" type="image/x-icon" />
+		<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+		<!-- CSS files -->
+		<link href="<%= BASE_URL %>dist/libs/jqvmap/dist/jqvmap.min.css" rel="stylesheet" />
+		<link href="<%= BASE_URL %>dist/css/tabler.min.css" rel="stylesheet" />
+		<link href="<%= BASE_URL %>dist/css/demo.min.css" rel="stylesheet" />
+
+		<!-- Form Page CSS files -->
+		<link href="<%= BASE_URL %>dist/libs/selectize/dist/css/selectize.css" rel="stylesheet" />
+		<link href="<%= BASE_URL %>dist/libs/flatpickr/dist/flatpickr.min.css" rel="stylesheet" />
+		<link href="<%= BASE_URL %>dist/libs/nouislider/distribute/nouislider.min.css" rel="stylesheet" />
+		
+		<!-- Calender CSS files -->
+		<link href="<%= BASE_URL %>dist/libs/fullcalendar/core/main.min.css" rel="stylesheet"/>
+		<link href="<%= BASE_URL %>dist/libs/fullcalendar/daygrid/main.min.css" rel="stylesheet"/>
+		<link href="<%= BASE_URL %>dist/libs/fullcalendar/timegrid/main.min.css" rel="stylesheet"/>
+		<link href="<%= BASE_URL %>dist/libs/fullcalendar/list/main.min.css" rel="stylesheet"/>
+	</head>
+	<body class="antialiased">
+		<noscript>
+			<strong
+				>We're sorry but admin doesn't work properly without JavaScript enabled. Please enable it to
+				continue.</strong
+			>
+		</noscript>
+		<div id="app"></div>
+		<!-- built files will be auto injected -->
+
+		<script
+			src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+			integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+			integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+			integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+			crossorigin="anonymous"
+		></script>
+		
+		<script src="https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.js"></script>
+
+		<!-- Libs JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.19.2/apexcharts.min.js"></script>
+		<script src="<%= BASE_URL %>dist/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="<%= BASE_URL %>dist/libs/jquery/dist/jquery.slim.min.js"></script>
+		<script src="<%= BASE_URL %>dist/libs/apexcharts/dist/apexcharts.min.js"></script>
+		<script src="<%= BASE_URL %>dist/libs/jqvmap/dist/jquery.vmap.min.js"></script>
+		<script src="<%= BASE_URL %>dist/libs/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+		<script src="<%= BASE_URL %>dist/libs/peity/jquery.peity.min.js"></script>
+		<!-- Form Page -->
+		<script src="<%= BASE_URL %>dist/libs/autosize/dist/autosize.min.js"></script>
+		<script src="<%= BASE_URL %>dist/libs/imask/dist/imask.min.js"></script>
+		<script src="<%= BASE_URL %>dist/libs/selectize/dist/js/standalone/selectize.min.js"></script>
+		<script src="<%= BASE_URL %>dist/libs/flatpickr/dist/flatpickr.min.js"></script>
+		<script src="<%= BASE_URL %>dist/libs/flatpickr/dist/plugins/rangePlugin.js"></script>
+		<script src="<%= BASE_URL %>dist/libs/nouislider/distribute/nouislider.min.js"></script>
+
+		<script src="<%= BASE_URL %>dist/libs/fullcalendar/core/main.min.js"></script>
+		<script src="<%= BASE_URL %>dist/libs/fullcalendar/daygrid/main.min.js"></script>
+		<script src="<%= BASE_URL %>dist/libs/fullcalendar/interaction/main.min.js"></script>
+		<script src="<%= BASE_URL %>dist/libs/fullcalendar/timegrid/main.min.js"></script>
+		<script src="<%= BASE_URL %>dist/libs/fullcalendar/list/main.min.js"></script>
+
+		<!-- Tabler Core -->
+		<script src="<%= BASE_URL %>dist/js/tabler.min.js"></script>
+	</body>
+</html>
