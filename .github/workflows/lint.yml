@@ -8,12 +8,12 @@ name: Lint Files and Run Test
           - main
 
 env:
-    VUE_APP_NODE_ENV: ${{ secrets.CYPRESS_RECORD_KEY }}
-    VUE_APP_API_URL:  ${{ secrets.CYPRESS_RECORD_KEY }}
-    VUE_APP_CLIENT_ID: ${{ secrets.CYPRESS_RECORD_KEY }}
-    VUE_APP_CLIENT_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-    VUE_APP_CLIENT_SECRET: ${{ secrets.CYPRESS_RECORD_KEY }}
-    VUE_APP_BUGSNAG_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+    VUE_APP_NODE_ENV: ${{ secrets.VUE_APP_NODE_ENV }}
+    VUE_APP_API_URL:  ${{ secrets.VUE_APP_API_URL }}
+    VUE_APP_CLIENT_ID: ${{ secrets.VUE_APP_CLIENT_ID }}
+    VUE_APP_CLIENT_KEY: ${{ secrets.VUE_APP_CLIENT_KEY }}
+    VUE_APP_CLIENT_SECRET: ${{ secrets.VUE_APP_CLIENT_SECRET }}
+    VUE_APP_BUGSNAG_KEY: ${{ secrets.VUE_APP_BUGSNAG_KEY }}
 
 jobs:
   lint-and-run-cypress-test:
@@ -29,6 +29,6 @@ jobs:
       # and run all Cypress tests
       - name: Cypress run
         uses: cypress-io/github-action@v2
-        with:
-          build: npm run build
-          start: npm start
+      - run: |
+              npm install
+              npx cypress run
