@@ -17,6 +17,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
+      - name: Setup npm package
+        run: npm init -y && npm install
       - name: Headless Chrome
         uses: cypress-io/github-action@v2
         timeout-minutes: 10
