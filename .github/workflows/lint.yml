@@ -7,16 +7,8 @@ name: Lint Files and Run Test
         branches:
           - main
 
-env:
-    VUE_APP_NODE_ENV: ${{ secrets.VUE_APP_NODE_ENV }}
-    VUE_APP_API_URL:  ${{ secrets.VUE_APP_API_URL }}
-    VUE_APP_CLIENT_ID: ${{ secrets.VUE_APP_CLIENT_ID }}
-    VUE_APP_CLIENT_KEY: ${{ secrets.VUE_APP_CLIENT_KEY }}
-    VUE_APP_CLIENT_SECRET: ${{ secrets.VUE_APP_CLIENT_SECRET }}
-    VUE_APP_BUGSNAG_KEY: ${{ secrets.VUE_APP_BUGSNAG_KEY }}
-
 jobs:
-  lint-and-run-cypress-test:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - name: Eslinting
@@ -24,13 +16,3 @@ jobs:
       - run: |
               npm install
               npm run lint
-
-      # Install NPM dependencies, cache them correctly
-      # and run all Cypress tests
-      - name: Cypress run
-        uses: cypress-io/github-action@v2
-        with:
-          browser: chrome
-          headless: true
-          build: npm run build
-          start: npm start
